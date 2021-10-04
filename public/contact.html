@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>*BUDHHA*</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+          <h3 class="navbar-brand" href="#">Budhha Quotes</h3>
+          <button class="navbar-toggler bg-primary text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">=</span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html#sec1">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Quotes
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="index.html#sec3">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                </ul>
+              </li>
+    
+              <li class="nav-item">
+                <a class="nav-link" href="carousel.html">Monasteries</a>
+              </li>
+    
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact Us</a>
+              </li>
+            </ul>
+    
+             <ul class='navbar-nav ml-auto'>
+                 <button class='btn btn-block bg-white text-primary'>A BUTTON</button>
+             </ul>
+          </div>
+        </div>
+      </nav>
+
+      <section id='contact_form'>
+        
+          <div class='container-fluid'>
+            <div class='row'>
+               <div class='col col-2 d-block m-auto'>
+              
+                <img id='imgforestleft' src="bdtheme_left.jpg" class='img-fluid'>
+                
+               </div> 
+           
+               <div class='col col-8 d-block mt-5'>
+
+                <header class='header-text text-center text-danger shadow p-2 mb-5 rounded mt-5'> PLEASE TELL US ABOUT YOURSELF</header>
+              
+                <form class="row g-3 needs-validation"  action="/contact" method="POST" autocomplete="off">
+                  <div class="col-md-4">
+                    <label for="validationCustom01" class="form-label">First name</label>
+                    <input type="text" class="form-control" id="validationCustom01" name="firstname" required>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="validationCustom02" class="form-label">Last name</label>
+                    <input type="text" class="form-control" id="validationCustom02" name="lastname" required>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="validationCustomUsername" class="form-label">Username</label>
+                    <div class="input-group has-validation">
+                      <span class="input-group-text" id="inputGroupPrepend">@</span>
+                      <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" name="email" required>
+                      <div class="invalid-feedback">
+                        Please choose a username.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="validationCustom03" class="form-label">Country</label>
+                    <select class="form-select" id="validationCustom03" name="selectcountry" onchange="loadstate()" required>
+                      <option selected disabled  value="">Choose...</option>
+                      <option>...</option>
+                    </select>
+                   
+                    
+                    <input type="text" class="form-control" id="countrytext" name="country" type="hidden" required >
+                    
+                    <div class="invalid-feedback">
+                      Please select a valid Country.
+                    </div>
+                  </div>
+
+                  <div class="col-md-3">
+                    <label for="validationCustom04" class="form-label">State</label>
+                    <select class="form-select" id="validationCustom04" name="state"  required>
+                      <option selected disabled  value="">Choose...</option>
+                      <option >...</option>
+                    </select>
+                    
+                    <div class="invalid-feedback">
+                      Please select a valid state.
+                    </div>
+                  </div>
+
+                  <div class="col-md-3">
+                    <label for="validationCustom05" class="form-label">Phone No</label>
+                    <input type="text" class="form-control" id="validationCustom05" name="contact" required>
+                    <div class="invalid-feedback">
+                      Please provide a valid Number.
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                      <label class="form-check-label" for="invalidCheck">
+                        Agree to terms and conditions
+                      </label>
+                      <div class="invalid-feedback">
+                        You must agree before submitting.
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-12">
+                    <button class="btn btn-primary" type="submit" name="save">Submit form</button>
+                  </div>
+                  
+                </form>
+               
+
+               </div> 
+
+               <div class='col col-2 d-block m-auto'>
+              
+                <img id='imgforestright' src="bdtheme_right.jpg" class='img-fluid'>
+
+             </div> 
+           </div>
+        </div>
+         
+
+        </section>
+  
+        
+
+        <script>
+          window.onload= dload()
+          var data
+
+function dload()
+{
+
+var display= document.getElementById("validationCustom03")
+
+
+ fetch("https://gist.githubusercontent.com/ebaranov/41bf38fdb1a2cb19a781/raw/fb097a60427717b262d5058633590749f366bd80/gistfile1.json?value=")
+.then ((apidata) => {
+  
+     //console.log(apidata)
+     return apidata.json()
+
+}).then((data) => {
+      
+       console.log(data)
+      // display.innerHTML=""
+       for(i=0;i<data.countries.length;i++)
+       {
+         var option 
+         display.innerHTML+=' <option value="' + i  + '">'  + data.countries[i].country + '</option> <br>'
+         
+        }
+        //ctext.innerHTML+=display.options[display.selectedIndex].text
+     }).catch((e) => {
+           
+         console.log(e)
+
+       })
+
+}
+    
+function loadstate()
+{
+     var gtdata= document.getElementById("validationCustom03")
+     var resultdropdown=document.getElementById("validationCustom04")
+     var ctext= document.getElementById("countrytext")
+
+var keyvalue=gtdata.options[gtdata.selectedIndex].value
+var keytext=gtdata.options[gtdata.selectedIndex].text
+
+ctext.value=keytext
+
+console.log('the keytext is:'+keytext)
+resultdropdown.length=0
+
+let defaultOption = document.createElement('option')
+defaultOption.text=''
+
+resultdropdown.add(defaultOption)
+resultdropdown.selectedIndex=0 
+
+//var result=document.getElementById("rslt")
+let option
+
+fetch("https://gist.githubusercontent.com/ebaranov/41bf38fdb1a2cb19a781/raw/fb097a60427717b262d5058633590749f366bd80/gistfile1.json")
+.then((data) => {
+
+return data.json()  
+
+}).then((state) =>{
+
+//console.log(state)
+console.log(keyvalue)
+for(i=0;i< state.countries[keyvalue].states.length;i++)
+
+       {
+       option=document.createElement('option')
+       option.text=state.countries[keyvalue].states[i]
+       option.value=state.countries[keyvalue].states[i]
+       resultdropdown.add(option)
+       
+      // result.innerHTML+=`<br> The states of ${state.countries[keyvalue].country} are:`   
+       //result.innerHTML+=`${state.countries[keyvalue].states[i]}`
+      }
+             
+})
+
+}
+    
+        </script>
+     
+    </body>
+</html>
